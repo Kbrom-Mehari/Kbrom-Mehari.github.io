@@ -3,7 +3,7 @@ import {
     Server,
     Database,
     Boxes,
-    ArrowDown
+    ArrowDown,
 } from "lucide-react";
 
 const architecture = [
@@ -17,8 +17,8 @@ const architecture = [
             "React",
             "TypeScript",
             "Tailwind CSS",
-            "Axios"
-        ]
+            "Axios",
+        ],
     },
     {
         icon: Server,
@@ -31,8 +31,8 @@ const architecture = [
             "Spring Boot",
             "Spring Security",
             "REST APIs",
-            "Netty"
-        ]
+            "Netty",
+        ],
     },
     {
         icon: Database,
@@ -43,8 +43,8 @@ const architecture = [
         technologies: [
             "PostgreSQL",
             "Redis",
-            "TimescaleDB"
-        ]
+            "TimescaleDB",
+        ],
     },
     {
         icon: Boxes,
@@ -56,16 +56,27 @@ const architecture = [
             "Docker",
             "Linux",
             "Git",
-            "Traccar"
-        ]
-    }
+            "Traccar",
+        ],
+    },
 ];
 
 export default function Skills() {
     return (
         <section
             id="skills"
-            className="mx-6 my-16 rounded-2xl border border-gray-800 bg-gray-900 px-6 py-16 md:px-12"
+            className="
+                mx-auto
+                md:mx-6
+                my-16
+                rounded-2xl
+                border
+                border-gray-800
+                bg-gray-900
+                px-4
+                md:px-12
+                py-16
+            "
         >
             {/* Header */}
 
@@ -75,11 +86,11 @@ export default function Skills() {
                     Architecture at a Glance
                 </span>
 
-                <h2 className="mt-3 text-4xl font-bold text-white">
+                <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
                     How I Build Software
                 </h2>
 
-                <p className="mt-6 text-lg leading-8 text-gray-400">
+                <p className="mt-6 text-base leading-8 text-gray-400 sm:text-lg">
                     Every project starts with understanding the problem before
                     choosing the technology. I think in terms of complete
                     systems—from the user interface to backend services, data,
@@ -88,9 +99,9 @@ export default function Skills() {
 
             </div>
 
-            {/* Vertical Architecture */}
+            {/* Architecture */}
 
-            <div className="mx-auto mt-20 max-w-4xl">
+            <div className="mx-auto mt-16 sm:mt-20 max-w-4xl">
 
                 {architecture.map((step, index) => {
 
@@ -100,15 +111,57 @@ export default function Skills() {
 
                         <div key={step.title}>
 
-                            <div className="relative flex gap-8">
+                            <div className="relative flex gap-4 sm:gap-8">
 
                                 {/* Timeline */}
 
                                 <div className="flex flex-col items-center">
 
-                                    <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-sky-500/30 bg-sky-500/10 text-sky-400">
+                                    <div className="relative">
 
-                                        <Icon size={26} />
+                                        {/* Step Number */}
+
+                                        <div
+                                            className="
+                                                absolute
+                                                -right-2
+                                                -top-2
+                                                flex
+                                                h-6
+                                                w-6
+                                                items-center
+                                                justify-center
+                                                rounded-full
+                                                bg-sky-500
+                                                text-[10px]
+                                                font-bold
+                                                text-gray-900
+                                            "
+                                        >
+                                            {String(index + 1).padStart(2, "0")}
+                                        </div>
+
+                                        {/* Icon */}
+
+                                        <div
+                                            className="
+                                                flex
+                                                h-10
+                                                w-10
+                                                sm:h-14
+                                                sm:w-14
+                                                items-center
+                                                justify-center
+                                                rounded-xl
+                                                sm:rounded-2xl
+                                                border
+                                                border-sky-500/30
+                                                bg-sky-500/10
+                                                text-sky-400
+                                            "
+                                        >
+                                            <Icon className="h-5 w-5 sm:h-7 sm:w-7" />
+                                        </div>
 
                                     </div>
 
@@ -120,17 +173,32 @@ export default function Skills() {
 
                                 {/* Content */}
 
-                                <div className="mb-12 flex-1 rounded-2xl border border-gray-800 bg-gray-800/60 p-7 transition-all duration-300 hover:border-sky-500/30">
+                                <div
+                                    className="
+                                        mb-8
+                                        sm:mb-12
+                                        flex-1
+                                        rounded-2xl
+                                        border
+                                        border-gray-800
+                                        bg-gray-800/60
+                                        p-5
+                                        sm:p-7
+                                        transition-all
+                                        duration-300
+                                        hover:border-sky-500/30
+                                    "
+                                >
 
-                                    <p className="text-sm uppercase tracking-widest text-sky-400">
+                                    <p className="text-xs uppercase tracking-[0.2em] text-sky-400 sm:text-sm">
                                         {step.subtitle}
                                     </p>
 
-                                    <h3 className="mt-2 text-2xl font-semibold text-white">
+                                    <h3 className="mt-2 text-xl font-semibold text-white sm:text-2xl">
                                         {step.title}
                                     </h3>
 
-                                    <p className="mt-5 leading-8 text-gray-400">
+                                    <p className="mt-4 text-sm leading-7 text-gray-400 sm:mt-5 sm:text-base sm:leading-8">
                                         {step.description}
                                     </p>
 
@@ -140,7 +208,17 @@ export default function Skills() {
 
                                             <span
                                                 key={tech}
-                                                className="rounded-full border border-gray-700 px-3 py-1 text-sm text-gray-300"
+                                                className="
+                                                    rounded-full
+                                                    border
+                                                    border-gray-700
+                                                    px-2.5
+                                                    py-1
+                                                    text-xs
+                                                    text-gray-300
+                                                    sm:px-3
+                                                    sm:text-sm
+                                                "
                                             >
                                                 {tech}
                                             </span>
@@ -154,9 +232,11 @@ export default function Skills() {
                             </div>
 
                             {index !== architecture.length - 1 && (
-                                <div className="mb-8 flex justify-center text-gray-600">
+
+                                <div className="mb-6 hidden justify-center text-gray-600 sm:flex">
                                     <ArrowDown size={18} />
                                 </div>
+
                             )}
 
                         </div>
@@ -169,13 +249,25 @@ export default function Skills() {
 
             {/* Closing Note */}
 
-            <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-sky-500/20 bg-sky-500/5 p-8">
+            <div
+                className="
+                    mx-auto
+                    mt-8
+                    max-w-3xl
+                    rounded-2xl
+                    border
+                    border-sky-500/20
+                    bg-sky-500/5
+                    p-5
+                    sm:p-8
+                "
+            >
 
-                <p className="text-center leading-8 text-gray-300">
-                    I build software that extends beyond traditional websites 
+                <p className="text-center text-sm leading-7 text-gray-300 sm:text-base sm:leading-8">
+                    I build software that extends beyond traditional websites,
                     especially systems for personal security, logistics, fleet
                     visibility, and organizational operations where software
-                    interacts with daily processes.
+                    interacts with real-world processes.
                 </p>
 
             </div>
