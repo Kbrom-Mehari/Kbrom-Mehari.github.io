@@ -10,7 +10,7 @@ const architecture = [
     {
         icon: MonitorSmartphone,
         title: "User Experience",
-        subtitle: "Where every system begins",
+        subtitle: "beautiful and easy to use interfaces",
         description:
             "I build interfaces that make complex workflows feel simple, whether it's managing shipments, monitoring fleets, or visualizing operational data.",
         technologies: [
@@ -22,14 +22,15 @@ const architecture = [
     },
     {
         icon: Server,
-        title: "Application Core",
-        subtitle: "The logic behind the system",
+        title: "Backend Engineering",
+        subtitle: "logic behind systems",
         description:
-            "This is where I spend most of my time—designing APIs, implementing business rules, securing applications, and connecting services that solve real operational problems.",
+            "Tools for designing APIs, implementing business rules and securing applications.",
         technologies: [
-            "Java",
+            "Java", "Python",
             "Spring Boot",
             "Spring Security",
+            "JPA/Hibernate",
             "REST APIs",
             "Netty",
         ],
@@ -37,26 +38,29 @@ const architecture = [
     {
         icon: Database,
         title: "Data Layer",
-        subtitle: "Choosing the right storage",
+        subtitle: "Database and caching",
         description:
-            "Different data deserves different storage strategies. I use relational databases for business data and specialized databases for high-volume time-series workloads.",
+            "I use relational databases for business data and specialized databases for high-volume time-series workloads.",
         technologies: [
             "PostgreSQL",
+            "MySQL",
             "Redis",
             "TimescaleDB",
+            "PostGIS"
         ],
     },
     {
         icon: Boxes,
         title: "Deployment & Integration",
-        subtitle: "Bringing everything together",
+        subtitle: "Cloud, containerization and platforms",
         description:
             "From Linux servers to Docker containers and GPS integrations, I focus on building software that runs reliably in real-world environments.",
         technologies: [
+            "Azure",
             "Docker",
-            "Linux",
-            "Git",
+            "Github Actions",
             "Traccar",
+            "Linux",
         ],
     },
 ];
@@ -83,18 +87,18 @@ export default function Skills() {
             <div className="mx-auto max-w-3xl text-center">
 
                 <span className="text-sm uppercase tracking-[0.25em] text-sky-400">
-                    Architecture at a Glance
+                    Behind the Build
                 </span>
 
                 <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
-                    How I Build Software
+                    Tools I use to build Software
                 </h2>
 
                 <p className="mt-6 text-base leading-8 text-gray-400 sm:text-lg">
-                    Every project starts with understanding the problem before
+                    I start every project by understanding the problem before
                     choosing the technology. I think in terms of complete
-                    systems—from the user interface to backend services, data,
-                    and infrastructure.
+                    systems from the user interface to backend services, data,
+                    and infrastructure. So, the tools I use depend on the system to be built
                 </p>
 
             </div>

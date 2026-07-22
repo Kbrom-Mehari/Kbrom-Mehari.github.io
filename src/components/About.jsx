@@ -9,13 +9,13 @@ const aboutCards = [
         icon: Lightbulb,
         title: "Why I Build",
         text:
-            "I enjoy building software that helps organizations understand their operations and make better decisions. Whether it's fleet visibility, logistics, or organizational security, I'm most motivated by systems that solve practical problems and create measurable impact.",
+            "Building software for operational systems is what interests me most. Logistics, fleet visibility, personal and organizational security all involve real challenges where reliable software can make a noticeable difference."
     },
     {
         icon: Cog,
         title: "How I Engineer",
         text:
-            "Backend engineering is where I spend most of my time. I design secure APIs, implement business logic, and build reliable services. At the same time, I believe powerful systems should remain intuitive, so I enjoy creating interfaces that make complex workflows feel simple.",
+            "I design secure APIs, implement domain business logic, and build reliable services. At the same time, I believe powerful systems should be beautiful and easy to use, so I love creating interfaces that make complex workflows feel simple.",
     },
     {
         icon: Rocket,

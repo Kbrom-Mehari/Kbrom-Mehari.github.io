@@ -44,7 +44,7 @@ const contacts = [
     {
         title: "Telegram",
         description:
-            "Ideal for quick conversations and project discussions.",
+            "For quick conversations and project discussions.",
         button: "Message",
         icon: <FaTelegram className="h-6 w-6 sm:h-7 sm:w-7" />,
         href: "https://t.me/kbrom_mehari",
@@ -97,9 +97,7 @@ export default function Contact() {
                 </h2>
 
                 <p className="mt-6 text-base leading-8 text-gray-400 sm:text-lg">
-                    Whether you're building a logistics platform, a fleet
-                    visibility solution, or another backend-focused application,
-                    I'd be happy to hear about it.
+                    Use any of the channels below to get in touch and discuss potential opportunities.
                 </p>
 
             </div>

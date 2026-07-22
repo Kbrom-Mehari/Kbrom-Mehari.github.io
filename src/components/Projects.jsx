@@ -31,10 +31,7 @@ const Projects = () => {
                 </h2>
 
                 <p className="mt-5 text-base leading-8 text-gray-400 sm:text-lg">
-                    These projects reflect the kinds of software I enjoy building,
-                    with focus on logistics platforms, fleet visibility solutions
-                    and backend systems designed with scalability and
-                    maintainability in mind.
+                    Systems designed with scalability and maintainability in mind.
                 </p>
 
             </div>
