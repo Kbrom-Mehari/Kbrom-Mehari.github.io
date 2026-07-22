@@ -32,11 +32,14 @@ export default function ProjectCard({ project }) {
         <>
             <article
                 className="
-                    flex flex-col
+                    flex
+                    flex-col
                     rounded-2xl
-                    border border-gray-800
+                    border
+                    border-gray-800
                     bg-gray-800
-                    p-7
+                    p-5
+                    sm:p-7
                     transition-all
                     duration-300
                     hover:-translate-y-1
@@ -45,20 +48,34 @@ export default function ProjectCard({ project }) {
             >
                 {/* Header */}
 
-                <div className="flex items-start justify-between gap-4">
+                <div
+                    className="
+                        flex
+                        flex-col
+                        gap-4
+                        sm:flex-row
+                        sm:items-start
+                        sm:justify-between
+                    "
+                >
                     <div>
-                        <h3 className="text-2xl font-bold text-white">
+                        <h3 className="text-xl font-bold text-white sm:text-2xl">
                             {project.title}
                         </h3>
 
-                        <p className="mt-3 leading-7 text-gray-400">
+                        <p className="mt-3 text-sm leading-7 text-gray-400 sm:text-base">
                             {project.description}
                         </p>
                     </div>
 
                     <span
                         className={`
-                            flex items-center gap-1
+                            inline-flex
+                            w-fit
+                            self-start
+                            sm:self-auto
+                            items-center
+                            gap-1
                             whitespace-nowrap
                             rounded-full
                             border
@@ -76,13 +93,16 @@ export default function ProjectCard({ project }) {
 
                 {/* Highlights */}
 
-                <div className="mt-8">
+                <div className="mt-6 sm:mt-8">
+
                     <p className="mb-3 text-sm uppercase tracking-wider text-gray-500">
                         Highlights
                     </p>
 
                     <ul className="space-y-2">
+
                         {project.features.map((feature) => (
+
                             <li
                                 key={feature}
                                 className="flex items-center gap-2 text-sm text-gray-300"
@@ -90,20 +110,27 @@ export default function ProjectCard({ project }) {
                                 <span className="h-1.5 w-1.5 rounded-full bg-sky-400"></span>
 
                                 {feature}
+
                             </li>
+
                         ))}
+
                     </ul>
+
                 </div>
 
                 {/* Tech Stack */}
 
-                <div className="mt-8">
+                <div className="mt-6 sm:mt-8">
+
                     <p className="mb-3 text-sm uppercase tracking-wider text-gray-500">
                         Built With
                     </p>
 
                     <div className="flex flex-wrap gap-2">
+
                         {project.techStack.map((tech) => (
+
                             <span
                                 key={tech}
                                 className="
@@ -118,21 +145,36 @@ export default function ProjectCard({ project }) {
                             >
                                 {tech}
                             </span>
+
                         ))}
+
                     </div>
+
                 </div>
 
                 {/* Buttons */}
 
-                <div className="mt-10 flex flex-wrap gap-3">
+                <div
+                    className="
+                        mt-8
+                        flex
+                        flex-col
+                        gap-3
+                        sm:mt-10
+                        sm:flex-row
+                        sm:flex-wrap
+                    "
+                >
                     <a
                         href={project.github}
                         target="_blank"
                         rel="noreferrer"
                         className="
                             inline-flex
+                            w-full
+                            sm:w-auto
+                            justify-center
                             items-center
-                            text-gray-400
                             gap-2
                             rounded-lg
                             border
@@ -141,24 +183,29 @@ export default function ProjectCard({ project }) {
                             py-2
                             text-sm
                             font-medium
+                            text-gray-400
                             transition
                             hover:border-white
                             hover:text-white
                         "
                     >
-                        <FaGithub size={18} aria-hidden="true" />
+                        <FaGithub size={18} />
 
                         Repository
+
                     </a>
 
                     {project.screenshots?.length > 0 && (
+
                         <button
                             type="button"
                             onClick={() => setGalleryOpen(true)}
                             className="
                                 inline-flex
+                                w-full
+                                sm:w-auto
+                                justify-center
                                 items-center
-                                text-gray-400
                                 gap-2
                                 rounded-lg
                                 border
@@ -167,6 +214,7 @@ export default function ProjectCard({ project }) {
                                 py-2
                                 text-sm
                                 font-medium
+                                text-gray-400
                                 transition
                                 hover:border-sky-500
                                 hover:text-sky-400
@@ -175,16 +223,22 @@ export default function ProjectCard({ project }) {
                             <Images size={18} />
 
                             Gallery
+
                         </button>
+
                     )}
 
                     {project.website && (
+
                         <a
                             href={project.website}
                             target="_blank"
                             rel="noreferrer"
                             className="
                                 inline-flex
+                                w-full
+                                sm:w-auto
+                                justify-center
                                 items-center
                                 gap-2
                                 rounded-lg
@@ -201,19 +255,26 @@ export default function ProjectCard({ project }) {
                             <ExternalLink size={18} />
 
                             Live Demo
+
                         </a>
+
                     )}
+
                 </div>
+
             </article>
 
             {project.screenshots?.length > 0 && (
+
                 <ImageGalleryModal
                     title={project.title}
                     images={project.screenshots}
                     isOpen={galleryOpen}
                     onClose={() => setGalleryOpen(false)}
                 />
+
             )}
+
         </>
     );
 }
