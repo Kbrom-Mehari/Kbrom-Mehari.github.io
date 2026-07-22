@@ -13,7 +13,9 @@ export const projects = [
             "Java",
             "Spring Boot",
             "React",
+            "JavaScript(MVP)",
             "TypeScript",
+            "TailwindCSS(Next version)",
             "PostgreSQL",
             "Docker",
         ],
@@ -31,6 +33,7 @@ export const projects = [
         features: [
             "JWT Authentication",
             "Shipment Management",
+            "Shipment Tracking",
             "Carrier Bidding",
             "Role-Based Authorization",
             "Dashboard",
@@ -50,7 +53,6 @@ export const projects = [
 
         techStack: [
             "Java",
-            "Spring Boot",
             "Netty",
             "TimescaleDB",
             "Redis",
@@ -58,7 +60,7 @@ export const projects = [
             "Docker",
         ],
 
-        github: "https://github.com/yourusername/fleet-management",
+        github: "https://github.com/Kbrom-Mehari/traccar",
 
         screenshots: [
             `${import.meta.env.BASE_URL}projectScreenshots/tracking/login_page.png`,
@@ -69,7 +71,8 @@ export const projects = [
 
         features: [
             "Real-Time GPS Tracking",
-            "Vehicle Registry",
+            "Remote Vehicle Immobilization",
+            "Smart Geofencing",
             "Tracking Sessions",
             "Alert Engine",
             "Interactive Maps",
