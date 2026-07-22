@@ -5,7 +5,7 @@ import heroImage from "../assets/hero.png";
 const Hero = () => {
 
     return (
-        <section className="bg-gray-900 my-8 px-6 py-16 md:px-12 rounded-2xl shadow-xl border border-gray-800 text-white mx-6 " id="hero">
+        <section className="bg-gray-900 my-8 px-6 py-16 md:px-12 rounded-2xl shadow-xl border border-gray-800 text-white md:mx-6 " id="hero">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
 
                 {/* Left Column: Bio / Text Content */}
