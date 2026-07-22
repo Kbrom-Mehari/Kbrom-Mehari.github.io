@@ -5,7 +5,18 @@ const Projects = () => {
     return (
         <section
             id="projects"
-            className="mx-6 my-16 rounded-2xl border border-gray-800 bg-gray-900 px-6 py-16 md:px-12"
+            className="
+                mx-auto
+                md:mx-6
+                my-16
+                rounded-2xl
+                border
+                border-gray-800
+                bg-gray-900
+                px-4
+                md:px-12
+                py-16
+            "
         >
             {/* Header */}
 
@@ -15,14 +26,15 @@ const Projects = () => {
                     Selected Work
                 </span>
 
-                <h2 className="mt-3 text-4xl font-bold text-white">
+                <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
                     Projects I've Built
                 </h2>
 
-                <p className="mt-5 text-lg leading-8 text-gray-400">
-                    These projects reflect the kinds of software I enjoy building, with
-                    focus on logistics platforms, fleet visibility solutions and backend
-                    systems designed with scalability and maintainability in mind.
+                <p className="mt-5 text-base leading-8 text-gray-400 sm:text-lg">
+                    These projects reflect the kinds of software I enjoy building,
+                    with focus on logistics platforms, fleet visibility solutions
+                    and backend systems designed with scalability and
+                    maintainability in mind.
                 </p>
 
             </div>
