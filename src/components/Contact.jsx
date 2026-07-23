@@ -97,7 +97,7 @@ export default function Contact() {
                 </h2>
 
                 <p className="mt-6 text-base leading-8 text-gray-400 sm:text-lg">
-                    Use any of the channels below to get in touch and discuss potential opportunities.
+                    Use any of the channels below to get in touch and discuss about your projects and ideas.
                 </p>
 
             </div>
