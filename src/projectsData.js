@@ -39,6 +39,19 @@ export const projects = [
             "Dashboard",
             "Responsive UI",
         ],
+        architecture: [
+            { label: "UI", value: "React experience for shipment workflows" },
+            { label: "Core", value: "Spring Boot services for bidding and logistics rules" },
+            { label: "Data", value: "PostgreSQL for transactional business state" },
+            { label: "Ops", value: "Dockerized deployment with CI-ready delivery" },
+        ],
+        deliveryFlow: [
+            "Create shipment request",
+            "Route opportunities to carriers",
+            "Validate bids and assign shipment",
+            "Track execution and operational status",
+        ],
+        impact: "Helps logistics teams coordinate freight more clearly and reduce manual handoffs across the shipment lifecycle.",
     },
 
     {
@@ -78,6 +91,19 @@ export const projects = [
             "Interactive Maps",
             "Device Management",
         ],
+        architecture: [
+            { label: "Edge", value: "GPS device events and live telemetry ingestion" },
+            { label: "Core", value: "Traccar-backed services for sessions and rules" },
+            { label: "Data", value: "TimescaleDB and Redis for time-series and fast lookups" },
+            { label: "Ops", value: "Containerized deployment for fleet monitoring environments" },
+        ],
+        deliveryFlow: [
+            "Receive device telemetry",
+            "Process sessions and geofence logic",
+            "Surface alerts and live vehicle views",
+            "Support operational response and reporting",
+        ],
+        impact: "Improves fleet visibility and gives operations teams faster insight into vehicle movement and exceptions.",
     },
 
     // {
