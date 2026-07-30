@@ -6,31 +6,22 @@ const Projects = () => {
         <section
             id="projects"
             className="
-                mx-auto
-                md:mx-6
-                my-16
-                rounded-2xl
-                border
-                border-gray-800
-                bg-gray-900
-                px-4
-                md:px-12
-                py-16
+                section-shell
             "
         >
             {/* Header */}
 
-            <div className="mx-auto mb-16 max-w-3xl text-center">
+            <div className="section-shell__inner mx-auto mb-12 max-w-3xl text-center">
 
-                <span className="text-sm font-medium uppercase tracking-[0.25em] text-sky-400">
+                <span className="section-kicker justify-center">
                     Selected Work
                 </span>
 
-                <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
+                <h2 className="section-title">
                     Projects I've Built
                 </h2>
 
-                <p className="mt-5 text-base leading-8 text-gray-400 sm:text-lg">
+                <p className="section-copy mx-auto">
                     Systems designed with scalability and maintainability in mind.
                 </p>
 
@@ -38,7 +29,18 @@ const Projects = () => {
 
             {/* Projects */}
 
-            <div className="grid gap-8 lg:grid-cols-2">
+            <div className="section-grid grid gap-8 px-4 pb-8 sm:px-6 md:grid-cols-2 lg:px-8">
+                <div className="rounded-2xl border border-white/8 bg-white/4 p-5 lg:col-span-2">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                        <div>
+                            <p className="text-[11px] uppercase tracking-[0.24em] text-slate-500">Repository view</p>
+                            <p className="mt-1 text-sm text-slate-300">Each project is treated like a product surface with architecture, delivery, and operational context.</p>
+                        </div>
+                        <div className="rounded-full border border-sky-400/20 bg-sky-400/8 px-3 py-1 text-xs text-sky-300">
+                            Production-minded delivery
+                        </div>
+                    </div>
+                </div>
 
                 {projects.map((project) => (
 

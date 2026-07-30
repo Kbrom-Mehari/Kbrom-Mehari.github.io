@@ -10,9 +10,9 @@ const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="border-t border-gray-800 bg-gray-900">
+        <footer className="border-t border-white/8 bg-slate-950/65">
 
-            <div className="mx-auto max-w-6xl px-6 py-12">
+            <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
 
                 <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
 
@@ -24,12 +24,12 @@ const Footer = () => {
                             Kbrom Mehari
                         </h3>
 
-                        <p className="mt-3 max-w-md leading-7 text-gray-400">
+                        <p className="mt-3 max-w-md leading-7 text-slate-400">
                             Building software solutions for logistics, fleet
                             visibility, and organizational security.
                         </p>
 
-                        <p className="mt-5 text-sm text-gray-500">
+                        <p className="mt-5 text-sm text-slate-500">
                             Designing and building with React, Spring Boot, and ☕.
                         </p>
 
@@ -43,7 +43,7 @@ const Footer = () => {
                             href="https://github.com/Kbrom-Mehari"
                             target="_blank"
                             rel="noreferrer"
-                            className="rounded-lg border border-gray-800 p-3 text-gray-400 transition hover:border-sky-500 hover:text-white"
+                            className="rounded-lg border border-white/8 p-3 text-slate-400 transition hover:border-sky-400/35 hover:text-white"
                         >
                             <FaGithub size={20} />
                         </a>
@@ -52,14 +52,14 @@ const Footer = () => {
                             href="https://linkedin.com/in/kbrom-mehari"
                             target="_blank"
                             rel="noreferrer"
-                            className="rounded-lg border border-gray-800 p-3 text-gray-400 transition hover:border-sky-500 hover:text-blue-600"
+                            className="rounded-lg border border-white/8 p-3 text-slate-400 transition hover:border-sky-400/35 hover:text-blue-400"
                         >
                             <FaLinkedin size={20} />
                         </a>
 
                         <a
                             href="mailto:kibrommehari121@gmail.com"
-                            className="rounded-lg border border-gray-800 p-3 text-gray-400 transition hover:border-sky-500 hover:text-white"
+                            className="rounded-lg border border-white/8 p-3 text-slate-400 transition hover:border-sky-400/35 hover:text-white"
                         >
                             <IoIosMail size={20} />
                         </a>
@@ -68,7 +68,7 @@ const Footer = () => {
 
                 </div>
 
-                <div className="mt-10 border-t border-gray-800 pt-6 text-sm text-gray-500">
+                <div className="mt-10 border-t border-white/8 pt-6 text-sm text-slate-500">
 
                     © {currentYear} Kbrom Mehari · Built with React & Tailwind CSS.
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Command, Menu, X } from "lucide-react";
 
 const links = [
     { label: "About", href: "#about" },
@@ -8,7 +8,7 @@ const links = [
     { label: "Contact", href: "#contact" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ onOpenPalette }) {
     const [isOpen, setIsOpen] = useState(false);
 
     const closeMenu = () => setIsOpen(false);
@@ -22,8 +22,8 @@ export default function Navbar() {
                     z-50
                     border-b
                     border-white/10
-                    bg-gray-900/80
-                    backdrop-blur-xl
+                    bg-slate-950/70
+                    backdrop-blur-2xl
                 "
             >
                 <div
@@ -39,25 +39,38 @@ export default function Navbar() {
                         lg:px-8
                     "
                 >
-                    {/* Logo */}
+                    <div className="flex items-center gap-4">
+                        <a
+                            href="#hero"
+                            className="
+                                text-lg
+                                font-semibold
+                                tracking-tight
+                                text-white
+                                transition
+                                hover:text-sky-300
+                            "
+                        >
+                            Kbrom Mehari
+                        </a>
 
-                    <a
-                        href="#hero"
-                        className="
-                            text-2xl
-                            font-bold
-                            tracking-tight
-                            text-white
-                            transition
-                            hover:text-sky-400
-                        "
-                    >
-                        <span className="text-sky-400">Kbrom Mehari</span>{" "}
-                    </a>
+                        <span className="hidden items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/8 px-3 py-1 text-[11px] font-medium text-emerald-300 sm:inline-flex">
+                            <span className="h-1.5 w-1.5 rounded-full bg-emerald-400 shadow-[0_0_0_4px_rgba(16,185,129,0.12)]" />
+                            Available for work
+                        </span>
+                    </div>
 
-                    {/* Desktop Navigation */}
-
-                    <ul className="hidden items-center gap-10 md:flex">
+                    <ul className="hidden items-center gap-8 md:flex">
+                        <li>
+                            <button
+                                type="button"
+                                onClick={onOpenPalette}
+                                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm font-medium text-slate-300 transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-400/35 hover:text-white"
+                            >
+                                <Command className="h-4 w-4 text-sky-300" />
+                                <span className="text-[11px] uppercase tracking-[0.24em] text-slate-400">Ctrl K</span>
+                            </button>
+                        </li>
 
                         {links.map((link) => (
 
@@ -68,8 +81,9 @@ export default function Navbar() {
                                     className="
                                         group
                                         relative
+                                        text-sm
                                         font-medium
-                                        text-gray-300
+                                        text-slate-300
                                         transition-colors
                                         hover:text-white
                                     "
@@ -105,11 +119,11 @@ export default function Navbar() {
                             rounded-xl
                             border
                             border-white/10
-                            bg-gray-800/60
+                            bg-slate-900/70
                             p-2.5
-                            text-gray-300
+                            text-slate-300
                             transition
-                            hover:bg-gray-700
+                            hover:bg-slate-800
                             hover:text-white
                             md:hidden
                         "
@@ -131,8 +145,8 @@ export default function Navbar() {
                     fixed
                     inset-0
                     z-40
-                    bg-gray-950/80
-                    backdrop-blur-xl
+                    bg-slate-950/85
+                    backdrop-blur-2xl
                     transition-all
                     duration-300
                     md:hidden
@@ -155,6 +169,9 @@ export default function Navbar() {
                         gap-8
                     "
                 >
+                    <span className="rounded-full border border-white/10 bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.24em] text-slate-400">
+                        Navigation
+                    </span>
 
                     {links.map((link) => (
 
@@ -165,7 +182,7 @@ export default function Navbar() {
                             className="
                                 text-3xl
                                 font-semibold
-                                text-gray-300
+                                text-slate-200
                                 transition
                                 hover:text-sky-400
                             "

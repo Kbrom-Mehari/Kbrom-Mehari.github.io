@@ -27,23 +27,27 @@ const statusIcon = {
 
 export default function ProjectCard({ project }) {
     const [galleryOpen, setGalleryOpen] = useState(false);
+    const [isExploring, setIsExploring] = useState(false);
 
     return (
         <>
             <article
                 className="
+                    motion-fade
                     flex
                     flex-col
                     rounded-2xl
                     border
                     border-gray-800
                     bg-gray-800
-                    p-5
-                    sm:p-7
+                    p-4
+                    sm:p-5
+                    md:p-6
                     transition-all
-                    duration-300
+                    duration-200
                     hover:-translate-y-1
                     hover:border-sky-500/40
+                    hover:shadow-[0_18px_60px_rgba(2,8,23,0.26)]
                 "
             >
                 {/* Header */}
@@ -59,11 +63,11 @@ export default function ProjectCard({ project }) {
                     "
                 >
                     <div>
-                        <h3 className="text-xl font-bold text-white sm:text-2xl">
+                        <h3 className="text-lg font-bold text-white sm:text-xl md:text-2xl">
                             {project.title}
                         </h3>
 
-                        <p className="mt-3 text-sm leading-7 text-gray-400 sm:text-base">
+                        <p className="mt-2 text-sm leading-7 text-gray-400 sm:mt-3 sm:text-base">
                             {project.description}
                         </p>
                     </div>
@@ -91,7 +95,104 @@ export default function ProjectCard({ project }) {
                     </span>
                 </div>
 
+                <div className="mt-5 rounded-2xl border border-white/8 bg-slate-950/40 p-4 sm:mt-6 sm:p-5">
+                    <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.24em] text-slate-500">
+                        <span className="h-2 w-2 rounded-full bg-sky-400" />
+                        Architecture
+                    </div>
+
+                    <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                        {project.architecture?.map((item) => (
+                            <div
+                                key={item.label}
+                                className="rounded-xl border border-white/8 bg-white/4 p-3"
+                            >
+                                <p className="text-[10px] uppercase tracking-[0.2em] text-slate-500">
+                                    {item.label}
+                                </p>
+                                <p className="mt-1 text-sm text-slate-100">{item.value}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                <div className="mt-4 grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
+                    <div className="rounded-2xl border border-white/8 bg-white/4 p-4">
+                        <p className="text-[11px] uppercase tracking-[0.24em] text-slate-500">
+                            Delivery flow
+                        </p>
+
+                        <ol className="mt-4 space-y-2">
+                            {project.deliveryFlow?.map((step, index) => (
+                                <li key={step} className="flex items-center gap-2 text-sm text-slate-300">
+                                    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-sky-400/20 bg-sky-400/8 text-[10px] font-semibold text-sky-300">
+                                        {index + 1}
+                                    </span>
+                                    <span>{step}</span>
+                                </li>
+                            ))}
+                        </ol>
+                    </div>
+
+                    <div className="rounded-2xl border border-white/8 bg-white/4 p-4">
+                        <p className="text-[11px] uppercase tracking-[0.24em] text-slate-500">
+                            Impact
+                        </p>
+                        <p className="mt-3 text-sm leading-7 text-slate-300">
+                            {project.impact}
+                        </p>
+                    </div>
+                </div>
+
                 {/* Highlights */}
+
+                <div className="mt-6 flex flex-col gap-3 rounded-2xl border border-white/8 bg-white/4 p-4 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                        <p className="text-[11px] uppercase tracking-[0.24em] text-slate-500">
+                            Interactive exploration
+                        </p>
+                        <p className="mt-1 text-sm text-slate-300">
+                            Toggle a compact system walkthrough for this project.
+                        </p>
+                    </div>
+
+                    <button
+                        type="button"
+                        onClick={() => setIsExploring((open) => !open)}
+                        className="inline-flex items-center justify-center rounded-full border border-sky-400/20 bg-sky-400/8 px-3 py-1.5 text-xs font-medium text-sky-300 transition-all duration-200 hover:-translate-y-0.5 hover:border-sky-400/35"
+                    >
+                        {isExploring ? "Hide view" : "Inspect system"}
+                    </button>
+                </div>
+
+                {isExploring && (
+                    <div className="mt-4 rounded-2xl border border-white/8 bg-slate-950/45 p-4">
+                        <div className="flex items-center justify-between gap-3">
+                            <div>
+                                <p className="text-[11px] uppercase tracking-[0.24em] text-slate-500">
+                                    System trace
+                                </p>
+                                <p className="mt-1 text-sm text-slate-300">
+                                    A compact look at how this product moves from input to delivery.
+                                </p>
+                            </div>
+                            <span className="rounded-full border border-emerald-500/20 bg-emerald-500/8 px-3 py-1 text-[11px] uppercase tracking-[0.24em] text-emerald-300">
+                                live view
+                            </span>
+                        </div>
+
+                        <div className="mt-4 space-y-2">
+                            {project.deliveryFlow?.slice(0, 3).map((step, index) => (
+                                <div key={step} className="flex items-center gap-2 rounded-xl border border-white/8 bg-white/4 p-3 text-sm text-slate-300">
+                                    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-sky-400/20 bg-sky-400/8 text-[10px] font-semibold text-sky-300">
+                                        {index + 1}
+                                    </span>
+                                    <span>{step}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
 
                 <div className="mt-6 sm:mt-8">
 

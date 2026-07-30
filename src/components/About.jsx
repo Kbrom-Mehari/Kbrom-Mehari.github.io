@@ -30,29 +30,20 @@ const About = () => {
         <section
             id="about"
             className="
-                mx-auto
-                md:mx-6
-                my-16
-                rounded-2xl
-                border
-                border-gray-800
-                bg-gray-900
-                px-4
-                md:px-12
-                py-16
+                section-shell
             "
         >
-            <div className="mx-auto max-w-6xl">
+            <div className="section-shell__inner mx-auto max-w-6xl">
 
                 {/* Header */}
 
                 <div className="max-w-3xl">
 
-                    <span className="text-sm uppercase tracking-[0.25em] text-sky-400">
+                    <span className="section-kicker">
                         About
                     </span>
 
-                    <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
+                    <h2 className="section-title">
                         The Way I Think About Software
                     </h2>
 
@@ -75,16 +66,16 @@ const About = () => {
                                     className="
                                         rounded-2xl
                                         border
-                                        border-gray-800
-                                        bg-gray-800/60
+                                        border-white/8
+                                        bg-white/4
                                         p-6
                                         sm:p-7
                                         transition-all
                                         duration-300
                                         hover:-translate-y-1
-                                        hover:border-sky-500/30
-                                        hover:bg-gray-800
-                                        hover:shadow-[0_0_30px_rgba(14,165,233,0.10)]
+                                        hover:border-sky-400/25
+                                        hover:bg-white/6
+                                        hover:shadow-[0_14px_40px_rgba(2,8,23,0.2)]
                                     "
                                 >
 
@@ -98,20 +89,20 @@ const About = () => {
                                                 items-center
                                                 justify-center
                                                 rounded-xl
-                                                bg-sky-500/10
-                                                text-sky-400
+                                                bg-sky-400/10
+                                                text-sky-300
                                             "
                                         >
                                             <Icon className="h-6 w-6" />
                                         </div>
 
-                                        <h3 className="text-xl font-semibold text-white">
+                                        <h3 className="text-xl font-semibold text-slate-100">
                                             {card.title}
                                         </h3>
 
                                     </div>
 
-                                    <p className="mt-6 text-sm leading-8 text-gray-300 sm:text-base">
+                                    <p className="mt-6 text-sm leading-8 text-slate-300 sm:text-base">
                                         {card.text}
                                     </p>
 
@@ -130,8 +121,8 @@ const About = () => {
                             h-fit
                             rounded-2xl
                             border
-                            border-gray-800
-                            bg-gray-800/60
+                            border-white/8
+                            bg-white/4
                             p-6
                             sm:p-7
                         "
@@ -139,11 +130,11 @@ const About = () => {
 
                         <div>
 
-                            <p className="text-sm uppercase tracking-widest text-sky-400">
+                            <p className="section-kicker">
                                 Current Focus
                             </p>
 
-                            <p className="mt-2 leading-7 text-white">
+                            <p className="mt-2 leading-7 text-slate-100">
                                 Logistics Platforms, Fleet Visibility, and
                                 Software for Organizational Security.
                             </p>
@@ -152,11 +143,11 @@ const About = () => {
 
                         <div className="mt-8">
 
-                            <p className="text-sm uppercase tracking-widest text-sky-400">
+                            <p className="section-kicker">
                                 Exploring
                             </p>
 
-                            <p className="mt-2 leading-7 text-gray-300">
+                            <p className="mt-2 leading-7 text-slate-300">
                                 Microservices, Kafka, Distributed Systems,
                                 Event-Driven Architecture, and Cloud
                                 Infrastructure.
@@ -166,11 +157,11 @@ const About = () => {
 
                         <div className="mt-8">
 
-                            <p className="text-sm uppercase tracking-widest text-sky-400">
+                            <p className="section-kicker">
                                 Engineering Philosophy
                             </p>
 
-                            <p className="mt-2 leading-7 text-gray-300">
+                            <p className="mt-2 leading-7 text-slate-300">
                                 Build software that solves real problems.
                                 Keep it reliable, maintainable, and as simple
                                 as possible.

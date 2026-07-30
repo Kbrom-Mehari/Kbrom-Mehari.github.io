@@ -70,31 +70,22 @@ export default function Skills() {
         <section
             id="skills"
             className="
-                mx-auto
-                md:mx-6
-                my-16
-                rounded-2xl
-                border
-                border-gray-800
-                bg-gray-900
-                px-4
-                md:px-12
-                py-16
+                section-shell
             "
         >
             {/* Header */}
 
-            <div className="mx-auto max-w-3xl text-center">
+            <div className="section-shell__inner mx-auto max-w-3xl text-center">
 
-                <span className="text-sm uppercase tracking-[0.25em] text-sky-400">
+                <span className="section-kicker justify-center">
                     Behind the Build
                 </span>
 
-                <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
+                <h2 className="section-title">
                     Tools I use to build Software
                 </h2>
 
-                <p className="mt-6 text-base leading-8 text-gray-400 sm:text-lg">
+                <p className="section-copy mx-auto">
                     I start every project by understanding the problem before
                     choosing the technology. I think in terms of complete
                     systems from the user interface to backend services, data,
@@ -105,7 +96,19 @@ export default function Skills() {
 
             {/* Architecture */}
 
-            <div className="mx-auto mt-16 sm:mt-20 max-w-4xl">
+            <div className="section-grid mx-auto max-w-4xl px-4 pb-8 sm:px-6 lg:px-0">
+                <div className="mb-8 rounded-2xl border border-white/8 bg-white/4 p-4 sm:p-5">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                        <div>
+                            <p className="text-[11px] uppercase tracking-[0.24em] text-slate-500">Architecture map</p>
+                            <p className="mt-1 text-sm text-slate-300">A practical system view: experience, services, data, operations.</p>
+                        </div>
+                        <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/8 px-3 py-1 text-xs text-emerald-300">
+                            <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                            Distributed systems ready
+                        </div>
+                    </div>
+                </div>
 
                 {architecture.map((step, index) => {
 
@@ -184,25 +187,26 @@ export default function Skills() {
                                         flex-1
                                         rounded-2xl
                                         border
-                                        border-gray-800
-                                        bg-gray-800/60
+                                        border-white/8
+                                        bg-white/4
                                         p-5
                                         sm:p-7
                                         transition-all
                                         duration-300
-                                        hover:border-sky-500/30
+                                        hover:border-sky-400/25
+                                        hover:shadow-[0_12px_36px_rgba(2,8,23,0.18)]
                                     "
                                 >
 
-                                    <p className="text-xs uppercase tracking-[0.2em] text-sky-400 sm:text-sm">
+                                    <p className="section-kicker">
                                         {step.subtitle}
                                     </p>
 
-                                    <h3 className="mt-2 text-xl font-semibold text-white sm:text-2xl">
+                                    <h3 className="mt-2 text-xl font-semibold text-slate-100 sm:text-2xl">
                                         {step.title}
                                     </h3>
 
-                                    <p className="mt-4 text-sm leading-7 text-gray-400 sm:mt-5 sm:text-base sm:leading-8">
+                                    <p className="mt-4 text-sm leading-7 text-slate-300 sm:mt-5 sm:text-base sm:leading-8">
                                         {step.description}
                                     </p>
 
@@ -215,11 +219,11 @@ export default function Skills() {
                                                 className="
                                                     rounded-full
                                                     border
-                                                    border-gray-700
+                                                    border-white/10
                                                     px-2.5
                                                     py-1
                                                     text-xs
-                                                    text-gray-300
+                                                    text-slate-300
                                                     sm:px-3
                                                     sm:text-sm
                                                 "
