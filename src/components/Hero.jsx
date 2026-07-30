@@ -12,7 +12,7 @@ const Hero = ({ isTerminalMode }) => {
                     {/* Left Column: Bio / Text Content */}
                     <div className="space-y-6 text-center lg:text-left">
                         <div className="space-y-3">
-                            <span className="section-kicker justify-center lg:justify-start">Production Engineer</span>
+                            <span className="section-kicker justify-center lg:justify-start">Software Engineer</span>
                             <h1 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
                                 <span className="text-sky-300">Kbrom Mehari</span>
                             </h1>
